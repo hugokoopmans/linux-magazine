@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Vezel14 App</title>  
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">; 
+    <!--
+    <script src="http://d3js.org/d3.v2.js"></script>
+    -->
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+  </head>
+  
+  <body>
+   
+    <header>
+	  <div class="container">
+	    <h1 class="logo">Vezel 14 App</h1>
+	    <strong><nav>
+	      <ul class="menu">
+	        <li><a href="{{ url_for('rpiapp.home') }}">Home</a></li>
+	        <li><a href="{{ url_for('rpiapp.p1') }}">P1</a></li>
+	        <li><a href="{{ url_for('rpiapp.about') }}">About</a></li>
+	      </ul>
+	    </nav></strong>
+	  </div>
+	</header>
+     
+    <div class="container">
+      {% block content %}
+      {% endblock %}
+    </div>
+     
+  </body>
+</html>
